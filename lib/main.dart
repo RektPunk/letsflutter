@@ -16,7 +16,25 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHompage(),
+      home: const _MyPrivateHompage(),
+    );
+  }
+}
+
+class _MyPrivateHompage extends StatelessWidget {
+  const _MyPrivateHompage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('appBar title')
+      ),
+      body: const Center(
+        child: Text('body title'),
+      ),
     );
   }
 }
