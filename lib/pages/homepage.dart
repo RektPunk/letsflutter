@@ -86,6 +86,10 @@ class MyRowHompage extends StatelessWidget {
             height: 30,
             width: 50,
           ),
+          const Expanded(
+            flex: 1,
+            child: Text('hi'), 
+          ),
         ],
       ),
     );
