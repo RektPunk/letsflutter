@@ -39,3 +39,55 @@ class MyHompage extends StatelessWidget {
     );
   }
 }
+
+class MyRowHompage extends StatelessWidget {
+  const MyRowHompage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('appBar title')
+      ),
+      body: Row(
+        children: [
+          Container(
+            color: Colors.yellow,
+            height: 30,
+            width: 30,
+          ),
+          const Spacer(flex: 2),
+          Container(
+            color: Colors.green,
+            height: 30,
+            width: 30,
+            child: const Text('text'),
+          ),
+          // SizedBox(
+          //   height: 30,
+          //   width: MediaQuery.of(context).size.width - 130 * 2,
+          // ),
+          const Spacer(flex: 1),
+          Container(
+            color: Colors.blue,
+            height: 30,
+            width: 80,
+          ),
+          Container(
+            color: Colors.red,
+            height: 30,
+            width: 50,
+          ),
+          const Spacer(flex: 2),
+          Container(
+            color: Colors.purple,
+            height: 30,
+            width: 50,
+          ),
+        ],
+      ),
+    );
+  }
+}
