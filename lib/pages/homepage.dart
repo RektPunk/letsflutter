@@ -95,3 +95,65 @@ class MyRowHompage extends StatelessWidget {
     );
   }
 }
+
+class Buttonpage extends StatelessWidget {
+  const Buttonpage({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test'),
+      ),
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: (){
+              print('Elevated button');
+            },
+            onLongPress: (){
+              print('Elevated long press');
+            }, 
+            child: const Text("Elevated Button"),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              print('Elevated button');
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Colors.grey,
+            ),
+            child: const Text("Elevated grey Button"),
+          ),
+          OutlinedButton(
+            onPressed: (){
+              print('Outlined button');
+            },
+            onLongPress: (){
+              print('Outlined long press');
+            },  
+            child: const Text("Outlined Button"),
+          ),
+          TextButton(
+            onPressed: (){
+              print('Text button');
+            },
+            onLongPress: (){
+              print('Text long press');
+            },  
+            child: const Text("Text Button"),
+          ),
+          GestureDetector(
+            onTap: (){
+              print('Gesture button');
+            },
+            onLongPress: (){
+              print('Gesture long press');
+            }, 
+            child: const Text("Gesture Detector"),
+          ),
+        ],
+      )
+    );
+  }
+}
