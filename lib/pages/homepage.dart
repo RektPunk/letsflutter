@@ -328,9 +328,9 @@ class ImageHomepage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozeJFQGku8IWxh74F2qtrPztDwlD4B0peu5RffbDTksMTev4h_EEvgAGRRjIx2qqv6UU&usqp=CAU'),
             Image.asset('assets/image/image.jpeg'),
             Image.asset('assets/image/image2.jpeg'),
-            Image.asset('assets/image/image.jpeg'),
         ], 
       ),
       )
