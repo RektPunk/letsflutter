@@ -290,7 +290,7 @@ class Generator extends StatefulWidget {
 
   final String title;
   final String name;
-  
+
   @override
   State<Generator> createState() => _GeneratorState();
 }
@@ -316,3 +316,26 @@ class _GeneratorState extends State<Generator> {
     );
   }
 }
+
+class ImageHomepage extends StatelessWidget {
+  const ImageHomepage({Key? key}) : super(key: key);
+  // /Users/rektpunk/development/letsflutter/assets/image/image.jpeg
+  // assets/image/image.jpeg
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          Image.asset(
+            'assets/image/image.jpeg'
+          ),
+          Image.asset(
+            'assets/image/image2.jpeg'
+          ),
+        ] 
+      ),
+    );
+  }
+}
+
