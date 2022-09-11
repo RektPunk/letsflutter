@@ -96,8 +96,8 @@ class MyRowHompage extends StatelessWidget {
   }
 }
 
-class Buttonpage extends StatelessWidget {
-  const Buttonpage({Key? key}) : super(key: key);
+class MyButtonpage extends StatelessWidget {
+  const MyButtonpage({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -196,4 +196,41 @@ class Buttonpage extends StatelessWidget {
     );
   }
 }
-  
+
+
+class MyWidget extends StatefulWidget {
+  MyWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('title'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                count++;
+              });
+            },
+            child: const Text('plus'),
+          ),
+          Center(
+            child: Text('$count'),
+          )
+        ]
+      )
+    );
+  }
+}
