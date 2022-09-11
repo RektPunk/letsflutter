@@ -325,16 +325,15 @@ class ImageHomepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          Image.asset(
-            'assets/image/image.jpeg'
-          ),
-          Image.asset(
-            'assets/image/image2.jpeg'
-          ),
-        ] 
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset('assets/image/image.jpeg'),
+            Image.asset('assets/image/image2.jpeg'),
+            Image.asset('assets/image/image.jpeg'),
+        ], 
       ),
+      )
     );
   }
 }
