@@ -280,3 +280,39 @@ class _FloatingWidget extends State<FloatingWidget> {
     );
   }
 }
+
+class Generator extends StatefulWidget {
+  const Generator({
+      Key? key,
+      required this.title,
+      required this.name,
+    }) : super(key: key);
+
+  final String title;
+  final String name;
+  
+  @override
+  State<Generator> createState() => _GeneratorState();
+}
+
+class _GeneratorState extends State<Generator> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'Hello ${widget.name}', 
+              style: Theme.of(context).textTheme.headline4
+            ),
+            Text(
+              'Hello ${widget.title} world',
+            ),
+          ],
+        ),
+      )
+    );
+  }
+}

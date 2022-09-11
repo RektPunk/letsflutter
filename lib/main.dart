@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const FloatingWidget(),
+      home: const Generator(title: "hi", name: "test"),
     );
   }
 }
