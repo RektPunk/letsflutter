@@ -107,49 +107,85 @@ class Buttonpage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ElevatedButton(
-            onPressed: (){
-              print('Elevated button');
-            },
-            onLongPress: (){
-              print('Elevated long press');
-            }, 
-            child: const Text("Elevated Button"),
+          Row(
+            children: [
+              ElevatedButton(
+                onPressed: null,
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue,
+                  onPrimary: Colors.grey,
+                  onSurface: Colors.blue,
+                ),
+                child: const Text("Elevated Button"),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  print('Elevated button');
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue,
+                  onPrimary: Colors.grey,
+                  onSurface: Colors.blue,
+                ),
+                child: const Text("Elevated grey Button"),
+              )
+            ],
           ),
-          ElevatedButton(
-            onPressed: (){
-              print('Elevated button');
-            },
-            style: ElevatedButton.styleFrom(
-              primary: Colors.grey,
-            ),
-            child: const Text("Elevated grey Button"),
+          Row(
+            children: [
+              OutlinedButton(
+                onPressed: null,
+                style: OutlinedButton.styleFrom(
+                  primary: Colors.grey,
+                  onSurface: Colors.blue,
+                  side: const BorderSide(
+                    color: Colors.blue,
+                  )
+                ),
+                child: const Text("Outlined Button"),
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  primary: Colors.grey,
+                ),
+                onPressed: (){
+                  print('Outlined button');
+                },
+                onLongPress: (){
+                  print('Outlined long press');
+                },  
+                child: const Text("Outlined Button"),
+              ),
+            ],
           ),
-          OutlinedButton(
-            onPressed: (){
-              print('Outlined button');
-            },
-            onLongPress: (){
-              print('Outlined long press');
-            },  
-            child: const Text("Outlined Button"),
-          ),
-          TextButton(
-            onPressed: (){
-              print('Text button');
-            },
-            onLongPress: (){
-              print('Text long press');
-            },  
-            child: const Text("Text Button"),
+          Row(
+            children: [
+              TextButton(
+                onPressed: null,
+                style: TextButton.styleFrom(
+                  primary: Colors.grey,
+                  onSurface: Colors.blue,
+                ),
+                child: const Text("Text Button"),
+              ),
+              TextButton(
+                onPressed: (){
+                  print('Text button');
+                },
+                style: TextButton.styleFrom(
+                  primary: Colors.grey,
+                ),
+                onLongPress: (){
+                  print('Text long press');
+                },  
+                child: const Text("Text Button"),
+              ),
+            ],
           ),
           GestureDetector(
             onTap: (){
               print('Gesture button');
             },
-            onLongPress: (){
-              print('Gesture long press');
-            }, 
             child: const Text("Gesture Detector"),
           ),
         ],
@@ -157,3 +193,4 @@ class Buttonpage extends StatelessWidget {
     );
   }
 }
+  
