@@ -234,3 +234,49 @@ class _MyWidgetState extends State<MyWidget> {
     );
   }
 }
+
+class FloatingWidget extends StatefulWidget {
+  const FloatingWidget({Key? key}) : super(key: key);
+
+  @override
+  State<FloatingWidget> createState() => _FloatingWidget();
+}
+
+class _FloatingWidget extends State<FloatingWidget> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('title'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() {
+          setState(() => count++);
+        }),
+        child: const Icon(
+          Icons.plus_one,
+          color: Colors.white,
+        )
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                count++;
+              });
+            },
+            child: const Text('plus'),
+          ),
+          Center(
+            child: Text('$count'),
+          )
+        ]
+      )
+    );
+  }
+}
