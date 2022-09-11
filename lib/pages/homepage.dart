@@ -186,6 +186,9 @@ class Buttonpage extends StatelessWidget {
             onTap: (){
               print('Gesture button');
             },
+            onTapDown: (detail) {
+              print('GestureDetector ${detail.kind}, ${detail.globalPosition}');
+            },
             child: const Text("Gesture Detector"),
           ),
         ],
