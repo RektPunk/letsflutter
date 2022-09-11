@@ -199,7 +199,7 @@ class MyButtonpage extends StatelessWidget {
 
 
 class MyWidget extends StatefulWidget {
-  MyWidget({Key? key}) : super(key: key);
+  const MyWidget({Key? key}) : super(key: key);
 
   @override
   State<MyWidget> createState() => _MyWidgetState();
