@@ -348,3 +348,29 @@ class ImageHomepage extends StatelessWidget {
   }
 }
 
+class BasicWidget extends StatelessWidget {
+  const BasicWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('appbar text'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.add_alert),
+            onPressed: (){},
+          ),
+          IconButton(
+            icon: const Icon(Icons.navigate_next),
+            onPressed: (){},
+          ),
+        ]
+      ),
+      body: const Center(
+        // child: Icon(Icons.star),
+        child: Placeholder(),
+      )
+    );
+  }
+}
