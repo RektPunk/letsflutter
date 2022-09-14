@@ -348,9 +348,15 @@ class ImageHomepage extends StatelessWidget {
   }
 }
 
-class BasicWidget extends StatelessWidget {
+class BasicWidget extends StatefulWidget {
   const BasicWidget({Key? key}) : super(key: key);
 
+  @override
+  State<BasicWidget> createState() => _BasicWidgetState();
+}
+
+class _BasicWidgetState extends State<BasicWidget> {
+  int _index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -370,7 +376,27 @@ class BasicWidget extends StatelessWidget {
       body: const Center(
         // child: Icon(Icons.star),
         child: Placeholder(),
-      )
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _index,
+        onTap: ((value) => setState(() {
+          _index = value;
+        })),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            label: "star",
+            icon: Icon(Icons.star),
+          ),
+          BottomNavigationBarItem(
+            label: "alarm",
+            icon: Icon(Icons.access_alarm),
+          ),
+          BottomNavigationBarItem(
+            label: "settings",
+            icon: Icon(Icons.settings),
+          ),
+        ]
+      ),
     );
   }
 }
