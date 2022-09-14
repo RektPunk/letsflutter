@@ -357,6 +357,7 @@ class BasicWidget extends StatefulWidget {
 
 class _BasicWidgetState extends State<BasicWidget> {
   int _index = 0;
+  double _slider = 0.3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -373,9 +374,14 @@ class _BasicWidgetState extends State<BasicWidget> {
           ),
         ]
       ),
-      body: const Center(
+      body: Center(
         // child: Icon(Icons.star),
-        child: Placeholder(),
+        child: Slider(
+          value: _slider, 
+          onChanged: (value) => setState(() {
+            _slider = value;
+          }),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index,
