@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyHompage extends StatelessWidget {
@@ -403,6 +404,30 @@ class _BasicWidgetState extends State<BasicWidget> {
           ),
         ]
       ),
+    );
+  }
+}
+
+class CupertinoWidget extends StatefulWidget {
+  const CupertinoWidget({Key? key}) : super(key: key);
+
+  @override
+  State<CupertinoWidget> createState() => _CuptertinoState();
+}
+
+class _CuptertinoState extends State<CupertinoWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      appBar: CupertinoNavigationBar(middle: Text('hi')),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: CupertinoSearchTextField(
+            prefixIcon: Icon(CupertinoIcons.add),
+          )
+        ),
+      )
     );
   }
 }
