@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:letsflutter/pages/homepage.dart';
+// import 'package:letsflutter/pages/homepage.dart';
+import 'pages/page1.dart';
 
 
 void main() {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: const CupertinoWidget(),
+      home: Scaffold(
+        appBar: AppBar(),
+        body: const Page1()
+      ),
     );
   }
 }
