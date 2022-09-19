@@ -15,9 +15,12 @@ class Page1 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(
-            'Page1 hello',
-            style: Theme.of(context).textTheme.headline4,
+          const Text(
+            'Page1 안녕',
+            style: TextStyle(
+              fontWeight: FontWeight.w300,
+              fontSize: 30,
+            )
           ),
           ElevatedButton(
             onPressed: () {

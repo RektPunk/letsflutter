@@ -21,9 +21,9 @@ class Page2 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(
-            'Page2 hello',
-            style: Theme.of(context).textTheme.headline4,
+          const Text(
+            'Page2 안녕',
+            style: TextStyle(fontWeight: FontWeight.w700),
           ),
           ElevatedButton(
             onPressed: () {

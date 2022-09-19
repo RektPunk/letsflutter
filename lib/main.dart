@@ -16,10 +16,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.pink,
+        fontFamily: 'GmarketSansTTF',
       ),
       home: Scaffold(
         appBar: AppBar(),
         body: const Page1()
+      ),
+      builder:(context, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        child: child!,
       ),
     );
   }
