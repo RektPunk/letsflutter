@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:letsflutter/components/letsflutter_themes.dart';
-// import 'package:letsflutter/pages/homepage.dart';
-import 'pages/page1.dart';
+import 'package:letsflutter/pages/homepage.dart';
 
 
 void main() {
@@ -15,11 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: LetsFlutterThemes.darkTheme,
-      home: Scaffold(
-        appBar: AppBar(),
-        body: const Page1()
-      ),
+      theme: LetsFlutterThemes.lightTheme,
+      home: const HomePage(),
       builder:(context, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
         child: child!,
