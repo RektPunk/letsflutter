@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:letsflutter/components/letsflutter_colors.dart';
-import 'package:letsflutter/pages/add/add_page.dart';
+import 'package:letsflutter/pages/add_medicine/add_medicine_page.dart';
 import 'package:letsflutter/pages/history/history_page.dart';
 import 'package:letsflutter/pages/today/today_page.dart';
 
@@ -82,6 +82,6 @@ class _HomePageState extends State<HomePage> {
   void _onAddMedicine() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (contxt) => const AddPage()));
+      MaterialPageRoute(builder: (contxt) => const AddMedicinePage()));
   }
 }
