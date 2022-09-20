@@ -8,6 +8,7 @@ class LetsFlutterThemes {
     brightness: Brightness.light,
     textTheme: _textTheme,
     scaffoldBackgroundColor: Colors.white,
+    appBarTheme: _appBarTheme,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 
@@ -19,6 +20,14 @@ class LetsFlutterThemes {
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 
+  static const AppBarTheme _appBarTheme = AppBarTheme(
+    backgroundColor: Colors.white,
+    iconTheme: IconThemeData(
+      color: LetsFlutterColors.primaryColor,
+    ),
+    elevation: 0,
+  );
+  
   static const TextTheme _textTheme = TextTheme(
     headline4: TextStyle(
       fontSize: 32,
